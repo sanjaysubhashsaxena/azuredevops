@@ -1,0 +1,26 @@
+2022-04-14 20:38:08.980  INFO 12400 --- [main] com.saxena.CustomerServiceApplication    : Starting CustomerServiceApplication using Java 17 on DESKTOP-DAQ6VPS with PID 12400 (C:\Users\Sanjay\Documents\project\microservice_workspace\CustomerService\target\classes started by Sanjay in C:\Users\Sanjay\Documents\project\microservice_workspace\CustomerService)
+2022-04-14 20:38:08.986 DEBUG 12400 --- [main] com.saxena.CustomerServiceApplication    : Running with Spring Boot v2.5.5, Spring v5.3.10
+2022-04-14 20:38:08.987  INFO 12400 --- [main] com.saxena.CustomerServiceApplication    : No active profile set, falling back to default profiles: default
+2022-04-14 20:38:10.493  INFO 12400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-04-14 20:38:10.618  INFO 12400 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 114 ms. Found 1 MongoDB repository interfaces.
+2022-04-14 20:38:11.187  INFO 12400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (http)
+2022-04-14 20:38:11.197  INFO 12400 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-14 20:38:11.197  INFO 12400 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.53]
+2022-04-14 20:38:11.271  INFO 12400 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-14 20:38:11.271  INFO 12400 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2148 ms
+2022-04-14 20:38:11.567  INFO 12400 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-04-14 20:38:11.702  INFO 12400 --- [cluster-ClusterId{value='625838dbab4a6b2e03f7bf3d', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:1}] to localhost:27017
+2022-04-14 20:38:11.702  INFO 12400 --- [cluster-rtt-ClusterId{value='625838dbab4a6b2e03f7bf3d', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:2}] to localhost:27017
+2022-04-14 20:38:11.703  INFO 12400 --- [cluster-ClusterId{value='625838dbab4a6b2e03f7bf3d', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=92952400}
+2022-04-14 20:38:12.276  INFO 12400 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-14 20:38:12.522  INFO 12400 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (http) with context path ''
+2022-04-14 20:38:12.568  INFO 12400 --- [main] com.saxena.CustomerServiceApplication    : Started CustomerServiceApplication in 4.45 seconds (JVM running for 5.923)
+2022-04-14 20:38:13.163  INFO 12400 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-14 20:38:13.164  INFO 12400 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-14 20:38:13.167  INFO 12400 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-04-14 20:38:27.308  INFO 12400 --- [http-nio-8090-exec-1] c.saxena.controller.CustomerController   : getCustomer is called!!
+2022-04-14 20:38:27.405  INFO 12400 --- [http-nio-8090-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:3}] to localhost:27017
+2022-04-14 20:46:40.537  INFO 12400 --- [http-nio-8090-exec-3] c.saxena.controller.CustomerController   : getCustomer is called!!
+2022-04-14 20:58:29.915  INFO 12400 --- [http-nio-8090-exec-6] c.saxena.controller.CustomerController   : getCustomer is called!!
+2022-04-14 20:59:22.484  INFO 12400 --- [RMI TCP Connection(30)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2022-04-14 20:59:22.594  INFO 12400 --- [RMI TCP Connection(30)-127.0.0.1] org.mongodb.driver.connection            : Closed connection [connectionId{localValue:3, serverValue:3}] to localhost:27017 because the pool has been closed.

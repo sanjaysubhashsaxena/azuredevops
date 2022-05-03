@@ -1,0 +1,39 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: Docker@2
+  displayName: Login to ACR
+  inputs:
+    command: 'login'
+    containerRegistry: 'ICICIPOCACR001'
+- task: Maven@3
+  displayName: Maven Build
+  inputs:
+    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+
+    jdkVersionOption: '1.8'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: false
+    testResultsFiles: '\*\*/surefire-reports/TEST-\*.xml'
+    goals: 'package -Dmaven.test.skip=true'
+- task: Docker@2
+  displayName: Build and Push
+  inputs:
+    containerRegistry: 'ICICIPOCACR001'
+    command: buildAndPush
+    repository: spring-demo
+    tags: latest
+- task: KubernetesManifest@0
+  displayName: Deploy on AKS
+  inputs:
+    action: 'deploy'
+    kubernetesServiceConnection: 'AKS-Connection'
+    namespace: 'default'
+    manifests: 'deploymentservice.yml'
+    
